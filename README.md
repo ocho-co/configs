@@ -1,3 +1,1 @@
-# prettier-config-ocho
-
-Prettier Configuration for Ocho
+# Ocho Configuration Files

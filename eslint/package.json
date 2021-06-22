@@ -1,0 +1,32 @@
+{
+  "name": "eslint-config-ocho",
+  "version": "0.0.2",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "14"
+  },
+  "files": [
+    "index.js"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^2.2.1",
+    "prettier-config-ocho": "0.0.1"
+  },
+  "prettier": "prettier-config-ocho",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "4.x",
+    "@typescript-eslint/parser": "4.x",
+    "eslint": "7.x",
+    "eslint-config-prettier": "8.x",
+    "eslint-plugin-import": "2.x",
+    "eslint-plugin-jsx-a11y": "6.x",
+    "eslint-plugin-react": "7.x",
+    "eslint-plugin-react-hooks": "4.x"
+  }
+}
