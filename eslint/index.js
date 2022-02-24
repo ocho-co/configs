@@ -32,9 +32,11 @@ module.exports = {
     'plugin:import/typescript',
   ],
   rules: {
+    // TypeScript
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-unused-vars': 'error',
 
+    // ESLint
     'max-lines': ['warn', { max: 500, skipBlankLines: true }],
     'max-params': ['warn', MAX_PARAMS],
     'no-unused-expressions': 'error',
@@ -44,9 +46,15 @@ module.exports = {
     'prefer-const': 'error',
     'prefer-destructuring': 'warn',
     'require-await': 'error',
+    'no-magic-numbers': [
+      'warn',
+      { ignoreArrayIndexes: true, ignore: [-1, 0, 1] },
+    ],
 
+    // React
     'react/react-in-jsx-scope': 'off',
 
+    // Import
     'import/order': [
       'warn',
       {
