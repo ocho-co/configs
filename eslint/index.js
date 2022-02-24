@@ -12,16 +12,24 @@ module.exports = {
   },
   ignorePatterns: 'src/generated/**/*',
   extends: [
+    // Recommended general
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
 
+    // Prettier-compatible
     'prettier',
 
+    // React rules
     'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
+
+    // Accessibility
     'plugin:jsx-a11y/strict',
 
+    // Imports
     'plugin:import/errors',
     'plugin:import/warnings',
+    'plugin:import/typescript',
   ],
   rules: {
     '@typescript-eslint/no-explicit-any': 'off',

@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-ocho",
-  "version": "0.0.4",
-  "description": "",
+  "version": "0.0.5",
+  "description": "ESLint config for Ocho projects",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,16 +12,22 @@
   "files": [
     "index.js"
   ],
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "eslint-plugin",
+    "ocho"
+  ],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
-    "prettier": "^2.2.1",
-    "prettier-config-ocho": "0.0.1"
+    "prettier": "2.x",
+    "prettier-config-ocho": "0.x"
   },
   "prettier": "prettier-config-ocho",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "4.x",
-    "@typescript-eslint/parser": "4.x",
+    "@typescript-eslint/eslint-plugin": "5.x",
+    "@typescript-eslint/parser": "5.x",
     "eslint-config-prettier": "8.x",
     "eslint-plugin-import": "2.x",
     "eslint-plugin-jsx-a11y": "6.x",
@@ -29,6 +35,6 @@
     "eslint-plugin-react-hooks": "4.x"
   },
   "peerDependencies": {
-    "eslint": "7.x"
+    "eslint": "8.x"
   }
 }

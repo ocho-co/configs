@@ -1,6 +1,6 @@
 {
   "name": "prettier-config-ocho",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -12,9 +12,17 @@
   "files": [
     "index.json"
   ],
+  "keywords": [
+    "prettier",
+    "prettier-config",
+    "ocho"
+  ],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
+  "license": "MIT",
+  "peerDependencies": {
+    "prettier": "2.x"
+  },
+  "devDependencies": {
     "prettier": "2.x"
   },
   "prettier": "./index.json"
