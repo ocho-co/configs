@@ -1,7 +1,6 @@
 const MAX_PARAMS = 3
 
 module.exports = {
-  root: true,
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint', 'jsx-a11y', 'import', 'react-hooks', 'react'],
   env: {
