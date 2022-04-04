@@ -35,11 +35,13 @@ module.exports = {
     // TypeScript
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-unused-vars': 'error',
+    '@typescript-eslint/no-redeclare': [1],
 
     // ESLint
     'max-lines': ['warn', { max: 500, skipBlankLines: true }],
     'max-params': ['warn', MAX_PARAMS],
     'no-unused-expressions': 'error',
+    'no-redeclare': 'off',
     'no-unused-vars': 'off',
     'no-useless-return': 'error',
     'no-magic-numbers': 'warn',
@@ -53,6 +55,7 @@ module.exports = {
 
     // React
     'react/react-in-jsx-scope': 'off',
+    'react/prop-types': [0],
 
     // Import
     'import/order': [
