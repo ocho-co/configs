@@ -51,6 +51,7 @@ module.exports = {
       'warn',
       { ignoreArrayIndexes: true, ignore: [-1, 0, 1] },
     ],
+    'func-style': ['warn', 'declaration', { allowArrowFunctions: true }],
 
     // React
     'react/react-in-jsx-scope': 'off',

@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ocho",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "ESLint config for Ocho projects",
   "main": "index.js",
   "scripts": {
