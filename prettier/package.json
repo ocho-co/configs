@@ -1,13 +1,13 @@
 {
   "name": "prettier-config-ocho",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "",
   "main": "./index.json",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
-    "node": "^14 || ^16"
+    "node": "^16 || ^18"
   },
   "files": [
     "index.json"
