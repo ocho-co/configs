@@ -1,0 +1,13 @@
+{
+  "name": "stylelint-config-ocho",
+  "version": "0.0.1",
+  "dependencies": {
+    "prettier": "^2.7.1",
+    "prettier-config-ocho": "^0.0.8",
+    "stylelint": "14.14.0",
+    "stylelint-config-recommended": "9.0.0",
+    "stylelint-config-styled-components": "0.1.1",
+    "stylelint-processor-styled-components": "1.10.0"
+  },
+  "prettier": "prettier-config-ocho"
+}
