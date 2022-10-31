@@ -63,6 +63,7 @@ module.exports = {
       {
         shorthandLast: true,
         reservedFirst: true,
+        noSortAlphabetically: true,
       },
     ],
     'react/jsx-no-useless-fragment': 'warn',
