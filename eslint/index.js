@@ -1,3 +1,5 @@
+'use strict'
+
 const MAX_PARAMS = 3
 
 module.exports = {
@@ -56,6 +58,14 @@ module.exports = {
     // React
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': [0],
+    'react/jsx-sort-props': [
+      'warn',
+      {
+        shorthandLast: true,
+        reservedFirst: true,
+      },
+    ],
+    'react/jsx-no-useless-fragment': 'warn',
 
     // Import
     'import/order': [
