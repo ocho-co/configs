@@ -12,6 +12,9 @@ module.exports = {
     'value-keyword-case': null,
     'keyframes-name-pattern': null,
     'string-quotes': 'single',
-    'color-hex-case': 'upper',
+    'color-hex-case': 'lower',
+    'declaration-colon-newline-after': null,
+    'alpha-value-notation': 'number',
+    'hue-degree-notation': 'number',
   },
 }
