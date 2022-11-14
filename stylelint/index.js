@@ -16,5 +16,6 @@ module.exports = {
     'declaration-colon-newline-after': null,
     'alpha-value-notation': 'number',
     'hue-degree-notation': 'number',
+    'selector-pseudo-element-colon-notation': 'single',
   },
 }

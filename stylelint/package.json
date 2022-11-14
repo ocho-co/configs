@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-ocho",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "dependencies": {
     "postcss-scss": "^4.0.5",
     "prettier": "^2.7.1",

@@ -43,6 +43,7 @@ module.exports = {
     'max-params': ['warn', MAX_PARAMS],
     'no-unused-expressions': 'error',
     'no-redeclare': 'off',
+    'no-return-await': 'error',
     'no-unused-vars': 'off',
     'no-useless-return': 'error',
     'no-magic-numbers': 'warn',
@@ -57,6 +58,7 @@ module.exports = {
 
     // React
     'react/react-in-jsx-scope': 'off',
+    'react/jsx-boolean-value': ['warn', 'never'],
     'react/prop-types': [0],
     'react/jsx-sort-props': [
       'warn',
