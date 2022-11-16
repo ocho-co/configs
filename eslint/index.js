@@ -45,6 +45,7 @@ module.exports = {
     'no-redeclare': 'off',
     'no-return-await': 'error',
     'no-unused-vars': 'off',
+    'no-unneeded-ternary': 'error',
     'no-useless-return': 'error',
     'no-magic-numbers': 'warn',
     'prefer-const': 'error',
