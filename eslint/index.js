@@ -39,6 +39,7 @@ module.exports = {
     '@typescript-eslint/no-redeclare': [1],
 
     // ESLint
+    'arrow-body-style': ['warn', 'as-needed'],
     'max-lines': ['warn', { max: 500, skipBlankLines: true }],
     'max-params': ['warn', MAX_PARAMS],
     'no-unused-expressions': 'error',
