@@ -44,6 +44,7 @@ module.exports = {
     'max-params': ['warn', MAX_PARAMS],
     'no-unused-expressions': 'error',
     'no-redeclare': 'off',
+    'no-else-return': 'warn',
     'no-return-await': 'error',
     'no-unused-vars': 'off',
     'no-unneeded-ternary': 'error',
