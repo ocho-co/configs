@@ -28,8 +28,7 @@ module.exports = {
     'plugin:jsx-a11y/strict',
 
     // Imports
-    'plugin:import/errors',
-    'plugin:import/warnings',
+    'plugin:import/recommended',
     'plugin:import/typescript',
   ],
   rules: {
@@ -93,6 +92,7 @@ module.exports = {
   settings: {
     react: { version: 'detect' },
     'import/resolver': {
+      typescript: true,
       node: {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
         moduleDirectory: ['node_modules', 'src'],

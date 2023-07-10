@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ocho",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "description": "ESLint config for Ocho projects",
   "main": "index.js",
   "scripts": {
@@ -29,6 +29,7 @@
     "@typescript-eslint/eslint-plugin": "5.x",
     "@typescript-eslint/parser": "5.x",
     "eslint-config-prettier": "8.x",
+    "eslint-import-resolver-typescript": "3.x",
     "eslint-plugin-import": "2.x",
     "eslint-plugin-jsx-a11y": "6.x",
     "eslint-plugin-react": "7.x",
