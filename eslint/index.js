@@ -71,7 +71,7 @@ module.exports = {
     */
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-unused-vars': ['warn', { varsIgnorePattern: '^_' }],
-    '@typecript-eslint/no-redeclare': [1],
+    '@typescript-eslint/no-redeclare': 'warn',
 
     /*
       R E A C T
@@ -101,7 +101,11 @@ module.exports = {
           // Packages `node` or `react` related packages come first.
           ['^node:', '^react', '^@?\\w'],
           // Internal packages.
-          ['^(@|components)(/.*|$)'],
+          ['^@/(screens|navigation)(/.*|$)'],
+          ['^@/modules(/.*|$)'],
+          ['^@/components(/.*|$)'],
+          ['^@/(lib|utils)(/.*|$)'],
+          ['^@(/.*|$)'],
           // Side effect imports.
           ['^\\u0000'],
           // Parent imports. Put `..` last.
