@@ -99,9 +99,9 @@ module.exports = {
       {
         groups: [
           // Packages `node` or `react` related packages come first.
-          ['^node:', '^react', '^@?\\w'],
+          ['^node:', '^react-?(dom|native)?$', '^@?\\w'],
           // Internal packages.
-          ['^@/(screens|navigation)(/.*|$)'],
+          ['^@/(screens|navigation|containers)(/.*|$)'],
           ['^@/modules(/.*|$)'],
           ['^@/components(/.*|$)'],
           ['^@/(lib|utils)(/.*|$)'],
