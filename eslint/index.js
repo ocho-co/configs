@@ -54,7 +54,6 @@ module.exports = {
     'no-unused-vars': 'off',
     'no-unneeded-ternary': 'error',
     'no-useless-return': 'error',
-    'no-magic-numbers': 'warn',
     'prefer-const': 'error',
     'no-implicit-coercion': 'error',
     'no-extra-boolean-cast': 'error',
@@ -94,6 +93,7 @@ module.exports = {
       },
     ],
     'react/jsx-no-useless-fragment': 'warn',
+    'react/jsx-no-leaked-render': 'error',
 
     /*
       I M P O R T S
