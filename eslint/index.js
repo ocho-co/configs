@@ -54,15 +54,15 @@ module.exports = {
     'no-unused-vars': 'off',
     'no-unneeded-ternary': 'error',
     'no-useless-return': 'error',
+    'no-magic-numbers': [
+      'warn',
+      { detectObjects: true, ignoreDefaultValues: true, ignore: [1, 2, 0, -1] },
+    ],
     'prefer-const': 'error',
     'no-implicit-coercion': 'error',
     'no-extra-boolean-cast': 'error',
     'prefer-destructuring': 'warn',
     'require-await': 'error',
-    'no-magic-numbers': [
-      'warn',
-      { ignoreArrayIndexes: true, ignore: [-1, 0, 1] },
-    ],
     'func-style': ['warn', 'declaration', { allowArrowFunctions: true }],
 
     /*
