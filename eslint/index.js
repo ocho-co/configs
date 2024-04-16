@@ -56,6 +56,7 @@ module.exports = {
     'no-useless-return': 'error',
     'no-magic-numbers': 'off',
 
+    'no-console': 'warn',
     'prefer-const': 'error',
     'no-implicit-coercion': 'error',
     'no-extra-boolean-cast': 'error',
