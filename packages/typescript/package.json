@@ -1,0 +1,29 @@
+{
+  "name": "@ocho/typescript-config",
+  "version": "0.1.0-beta.4",
+  "type": "module",
+  "main": "tsconfig.json",
+  "author": "OCHO",
+  "license": "MIT",
+  "description": "TypeScript config for OCHO projects",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ocho-co/configs.git",
+    "directory": "packages/typescript"
+  },
+  "files": [
+    "tsconfig.json"
+  ],
+  "keywords": [
+    "typescript",
+    "typescript-config",
+    "ocho"
+  ],
+  "dependencies": {
+    "typescript": "5.x"
+  },
+  "peerDependencies": {
+    "@ocho/prettier-config": "workspace:^"
+  },
+  "prettier": "@ocho/prettier-config"
+}

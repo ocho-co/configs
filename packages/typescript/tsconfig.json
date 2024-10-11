@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "allowUnreachableCode": false,
+    "alwaysStrict": true,
+    "esModuleInterop": true,
+    "jsx": "react",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "noImplicitAny": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "removeComments": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "target": "ES6"
+  },
+  "display": "OCHO",
+  "exclude": [
+    "node_modules/**/*",
+    "dist/**/*",
+    "build/**/*",
+    ".vercel/**/*",
+    ".sentry/**/*",
+    ".expo/**/*",
+    "ios/**/*",
+    "android/**/*",
+    "babel.config.js",
+    "metro.config.js",
+    "jest.config.js",
+    "web-build/**/*"
+  ],
+  "projectService": {
+    "allowDefaultProject": ["*/**.js", "*/**.mjs", "eslint.config.mjs"]
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "extends": "@ocho/typescript-config",
+  "include": ["./eslint.config.mjs"]
+}

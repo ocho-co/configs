@@ -1,6 +1,6 @@
-# eslint-config-ocho
+# @ocho/eslint-config
 
-ESLint Configuration for Ocho projects
+ESLint Configuration for OCHO projects
 
 ## Installation
 

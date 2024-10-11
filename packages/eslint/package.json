@@ -1,0 +1,46 @@
+{
+  "name": "@ocho/eslint-config",
+  "version": "0.1.0-beta.24",
+  "type": "module",
+  "description": "ESLint config for Ocho projects",
+  "main": "eslint.config.mjs",
+  "author": "OCHO",
+  "license": "MIT",
+  "scripts": {
+    "test": "tsc --noEmit"
+  },
+  "files": [
+    "eslint.config.mjs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ocho-co/configs.git",
+    "directory": "packages/eslint"
+  },
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "ocho"
+  ],
+  "dependencies": {
+    "@eslint/js": "9.x",
+    "@tanstack/eslint-plugin-query": "5.x",
+    "@types/eslint__js": "8.x",
+    "eslint-config-prettier": "9.x",
+    "eslint-plugin-jsx-a11y": "6.x",
+    "eslint-plugin-perfectionist": "3.x",
+    "eslint-plugin-react": "7.x",
+    "eslint-plugin-react-hooks": "5.1.0-rc-77f43893-20241010",
+    "eslint-plugin-unicorn": "56.x",
+    "globals": "15.x",
+    "typescript-eslint": "8.x"
+  },
+  "peerDependencies": {
+    "@ocho/prettier-config": "workspace:^",
+    "@ocho/typescript-config": "workspace:^"
+  },
+  "prettier": "@ocho/prettier-config",
+  "devDependencies": {
+    "@types/node": "22.x"
+  }
+}

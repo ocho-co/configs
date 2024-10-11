@@ -1,0 +1,29 @@
+{
+  "name": "@ocho/prettier-config",
+  "version": "0.1.0-beta.1",
+  "type": "module",
+  "author": "OCHO",
+  "license": "MIT",
+  "description": "Prettier config for OCHO projects",
+  "main": "./index.json",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ocho-co/configs.git",
+    "directory": "packages/prettier"
+  },
+  "files": [
+    "index.json"
+  ],
+  "keywords": [
+    "prettier",
+    "prettier-config",
+    "ocho"
+  ],
+  "dependencies": {
+    "prettier": "3.x"
+  },
+  "prettier": "./index.json"
+}

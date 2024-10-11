@@ -1,0 +1,19 @@
+{
+  "name": "@ocho/configs",
+  "private": true,
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ocho-co/configs.git"
+  },
+  "scripts": {
+    "publish:beta": "pnpm publish -r --access public --tag beta",
+    "publish:latest": "pnpm publish -r --access public --tag latest"
+  },
+  "dependencies": {
+    "@ocho/eslint-config": "workspace:*",
+    "@ocho/prettier-config": "workspace:*",
+    "@ocho/stylelint-config": "workspace:*",
+    "@ocho/typescript-config": "workspace:*"
+  }
+}
