@@ -1,18 +1,23 @@
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+import path from 'node:path'
+import url from 'node:url'
+
 import eslint from '@eslint/js'
+import tanstackQuery from '@tanstack/eslint-plugin-query'
 import perfectionist from 'eslint-plugin-perfectionist'
 import reactPlugin from 'eslint-plugin-react'
 import reactHooks from 'eslint-plugin-react-hooks'
 import eslintPluginUnicorn from 'eslint-plugin-unicorn'
 import globals from 'globals'
-import path from 'node:path'
-import url from 'node:url'
 import tsEslint from 'typescript-eslint'
-import tanstackQuery from '@tanstack/eslint-plugin-query'
 
 const __dirname =
   'dirname' in import.meta && typeof import.meta.dirname === 'string'
     ? 'import.meta.dirname'
     : path.dirname(url.fileURLToPath(import.meta.url))
+
+const MAX_PARAMS = 5
 
 export default tsEslint.config(
   eslint.configs.recommended,
@@ -49,35 +54,12 @@ export default tsEslint.config(
     },
 
     plugins: {
-      // React
       react: reactPlugin,
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       'react-hooks': reactHooks,
     },
 
     rules: {
       ...reactHooks.configs.recommended.rules,
-
-      'unicorn/no-abusive-eslint-disable': 'off',
-
-      'no-restricted-imports': [
-        'error',
-        {
-          paths: [
-            {
-              name: 'react',
-              importNames: ['default'],
-              message: 'Do need to import React default',
-            },
-          ],
-        },
-      ],
-
-      'max-params': ['error', 5],
-
-      'max-lines': ['error', { max: 500, skipBlankLines: true }],
-
-      'react/jsx-no-useless-fragment': 'error',
 
       '@typescript-eslint/consistent-type-imports': [
         'warn',
@@ -101,39 +83,50 @@ export default tsEslint.config(
         { allowNumber: true },
       ],
 
+      'max-lines': ['error', { max: 500, skipBlankLines: true }],
+
+      'max-params': ['error', MAX_PARAMS],
+
       'no-console': 'warn',
 
+      'no-restricted-imports': [
+        'error',
+        {
+          paths: [
+            {
+              importNames: ['default'],
+              message: 'No need to import React default',
+              name: 'react',
+            },
+          ],
+        },
+      ],
       'perfectionist/sort-imports': [
         'warn',
         {
           customGroups: {
             type: {
-              components: ['@/components'],
-              containers: ['@/screens', '@/containers'],
-              modules: ['@/modules'],
-              navigation: ['@/navigation'],
+              components: ['@/components/**'],
+              containers: ['@/screens/**', '@/containers/**'],
+              modules: ['@/modules/**'],
+              navigation: ['@/navigation/**'],
               node: ['node:*'],
               react: ['react', 'react-dom', 'react-native'],
             },
             value: {
-              components: ['@/components'],
-              containers: ['@/screens', '@/containers'],
-              modules: ['@/modules'],
-              navigation: ['@/navigation'],
+              components: ['@/components/**'],
+              containers: ['@/screens/**', '@/containers/**'],
+              modules: ['@/modules/**'],
+              navigation: ['@/navigation/**'],
               node: ['node:*'],
               react: ['react', 'react-dom', 'react-native'],
             },
           },
           environment: 'node',
           groups: [
-            [
-              'node',
-              'react',
-              'builtin',
-              'external',
-              'builtin-type',
-              'external-type',
-            ],
+            ['node', 'react', 'builtin'],
+
+            ['external', 'builtin-type', 'external-type'],
 
             ['navigation'],
 
@@ -154,13 +147,32 @@ export default tsEslint.config(
             ['unknown'],
           ],
           ignoreCase: true,
-          internalPattern: ['@/**'],
+          internalPattern: ['@/**', '~/**'],
           maxLineLength: undefined,
           newlinesBetween: 'always',
           order: 'asc',
           type: 'natural',
         },
       ],
+
+      'perfectionist/sort-jsx-props': [
+        'warn',
+        {
+          customGroups: {
+            callbacks: ['on*'],
+            keywords: ['key', 'ref'],
+          },
+          groups: [
+            'keywords',
+            'callbacks',
+            'multiline',
+            'unknown',
+            'shorthand',
+          ],
+        },
+      ],
+
+      'react/jsx-no-useless-fragment': 'error',
 
       'react/react-in-jsx-scope': 'off', // Unnecessary
 
@@ -171,6 +183,8 @@ export default tsEslint.config(
           ignore: [/\.(t|j)sx$/i],
         },
       ],
+
+      'unicorn/no-abusive-eslint-disable': 'off',
 
       'unicorn/no-array-reduce': 'off',
 

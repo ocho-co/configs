@@ -1,6 +1,6 @@
 {
   "name": "@ocho/eslint-config",
-  "version": "0.1.0-beta.24",
+  "version": "0.1.0-beta.29",
   "type": "module",
   "description": "ESLint config for Ocho projects",
   "main": "eslint.config.mjs",
@@ -30,7 +30,7 @@
     "eslint-plugin-jsx-a11y": "6.x",
     "eslint-plugin-perfectionist": "3.x",
     "eslint-plugin-react": "7.x",
-    "eslint-plugin-react-hooks": "5.1.0-rc-77f43893-20241010",
+    "eslint-plugin-react-hooks": "5.1.0-rc-83825814-20241015",
     "eslint-plugin-unicorn": "56.x",
     "globals": "15.x",
     "typescript-eslint": "8.x"

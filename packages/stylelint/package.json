@@ -1,23 +1,23 @@
 {
   "name": "@ocho/stylelint-config",
-  "version": "0.1.0-beta.1",
+  "version": "0.1.0-beta.14",
   "type": "module",
   "author": "OCHO",
   "license": "MIT",
-  "main": "index.js",
+  "main": "./index.mjs",
   "description": "Stylelint config for OCHO projects",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ocho-co/configs.git",
     "directory": "packages/stylelint"
   },
+  "files": [
+    "index.mjs"
+  ],
   "dependencies": {
-    "postcss-scss": "4.x",
     "stylelint": "16.x",
-    "stylelint-config-recommended": "14.x",
-    "stylelint-config-standard-scss": "13.x",
-    "stylelint-config-styled-components": "0.1.x",
-    "stylelint-processor-styled-components": "1.x"
+    "postcss-styled-syntax": "0.x",
+    "stylelint-config-standard": "36.x"
   },
   "peerDependencies": {
     "@ocho/prettier-config": "workspace:^"
