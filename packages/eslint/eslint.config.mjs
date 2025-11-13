@@ -24,6 +24,8 @@ export default defineConfig(
   perfectionist.configs['recommended-natural'],
 
   {
+    extends: ['react-hooks/recommended'],
+
     languageOptions: {
       globals: {
         ...globals.builtin,
@@ -47,7 +49,6 @@ export default defineConfig(
     },
 
     rules: {
-      ...reactHooks.configs.recommended.rules,
       '@typescript-eslint/consistent-type-imports': [
         'warn',
         { fixStyle: 'separate-type-imports', prefer: 'type-imports' },
