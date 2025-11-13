@@ -1,39 +1,26 @@
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-import path from 'node:path'
-import url from 'node:url'
-
 import eslint from '@eslint/js'
 import tanstackQuery from '@tanstack/eslint-plugin-query'
 import perfectionist from 'eslint-plugin-perfectionist'
 import reactPlugin from 'eslint-plugin-react'
 import reactHooks from 'eslint-plugin-react-hooks'
 import eslintPluginUnicorn from 'eslint-plugin-unicorn'
+import { defineConfig } from 'eslint/config'
 import globals from 'globals'
 import tsEslint from 'typescript-eslint'
 
-const __dirname =
-  'dirname' in import.meta && typeof import.meta.dirname === 'string'
-    ? 'import.meta.dirname'
-    : path.dirname(url.fileURLToPath(import.meta.url))
-
 const MAX_PARAMS = 5
 
-export default tsEslint.config(
+export default defineConfig(
   eslint.configs.recommended,
-  ...tsEslint.configs.strictTypeChecked,
-  ...tsEslint.configs.stylisticTypeChecked,
 
-  // React
+  tsEslint.configs.strictTypeChecked,
+  tsEslint.configs.stylisticTypeChecked,
+
   reactPlugin.configs.flat.recommended,
+  reactPlugin.configs.flat['jsx-runtime'],
 
-  // Unicorn
-  eslintPluginUnicorn.configs['flat/all'],
+  tanstackQuery.configs['flat/recommended'],
 
-  // React Query
-  ...tanstackQuery.configs['flat/recommended'],
-
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
   perfectionist.configs['recommended-natural'],
 
   {
@@ -49,18 +36,18 @@ export default tsEslint.config(
           jsx: true,
         },
         projectService: true,
-        tsconfigRootDir: __dirname,
+        tsconfigRootDir: import.meta.dirname,
       },
     },
 
     plugins: {
       react: reactPlugin,
       'react-hooks': reactHooks,
+      unicorn: eslintPluginUnicorn,
     },
 
     rules: {
       ...reactHooks.configs.recommended.rules,
-
       '@typescript-eslint/consistent-type-imports': [
         'warn',
         { fixStyle: 'separate-type-imports', prefer: 'type-imports' },
@@ -106,20 +93,20 @@ export default tsEslint.config(
         {
           customGroups: {
             type: {
-              components: ['@/components/**'],
-              containers: ['@/screens/**', '@/containers/**'],
-              modules: ['@/modules/**'],
-              navigation: ['@/navigation/**'],
-              node: ['node:*'],
-              react: ['react', 'react-dom', 'react-native'],
+              components: ['^@/components/.+'],
+              containers: ['^@/screens/.+', '^@/containers/.+'],
+              modules: ['^@/modules/.+'],
+              navigation: ['^@/navigation/.+'],
+              node: ['^node:.+', '^node$'],
+              react: ['^react$', '^react-dom$', '^react-native$'],
             },
             value: {
-              components: ['@/components/**'],
-              containers: ['@/screens/**', '@/containers/**'],
-              modules: ['@/modules/**'],
-              navigation: ['@/navigation/**'],
-              node: ['node:*'],
-              react: ['react', 'react-dom', 'react-native'],
+              components: ['^@/components/.+'],
+              containers: ['^@/screens/.+', '^@/containers/.+'],
+              modules: ['^@/modules/.+'],
+              navigation: ['^@/navigation/.+'],
+              node: ['^node:.+', '^node$'],
+              react: ['^react$', '^react-dom$', '^react-native$'],
             },
           },
           environment: 'node',
@@ -147,7 +134,7 @@ export default tsEslint.config(
             ['unknown'],
           ],
           ignoreCase: true,
-          internalPattern: ['@/**', '~/**'],
+          internalPattern: ['^@/.+', '^~/.+'],
           maxLineLength: undefined,
           newlinesBetween: 'always',
           order: 'asc',
@@ -159,15 +146,15 @@ export default tsEslint.config(
         'warn',
         {
           customGroups: {
-            callbacks: ['on*'],
-            keywords: ['key', 'ref'],
+            callbacks: '^on.+',
+            keywords: '^key|ref|testID$',
           },
           groups: [
             'keywords',
             'callbacks',
-            'multiline',
+            'multiline-prop',
             'unknown',
-            'shorthand',
+            'shorthand-prop',
           ],
         },
       ],

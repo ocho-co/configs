@@ -15,5 +15,8 @@
     "@ocho/prettier-config": "workspace:*",
     "@ocho/stylelint-config": "workspace:*",
     "@ocho/typescript-config": "workspace:*"
-  }
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }

@@ -20,7 +20,7 @@
     "ocho"
   ],
   "dependencies": {
-    "typescript": "5.x"
+    "typescript": "5.9.3"
   },
   "peerDependencies": {
     "@ocho/prettier-config": "workspace:^"
